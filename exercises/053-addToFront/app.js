@@ -1,7 +1,10 @@
 function addToFront(arr, element) {
   // your code here
+  function addToFront(arr, element) {
+    // Use unshift to add the element to the front of the array
+    arr.unshift(element);
   
+    // Return the modified array
+    return arr;
+  }
 }
-
-let output = addToFront([1, 2], 3);
-console.log(output); // -> [3, 1, 2]
