@@ -1,4 +1,4 @@
-function computeTripledAreaOfARectangle(length, width) {
+git function computeTripledAreaOfARectangle(length, width) {
   // your code here
   
 }
