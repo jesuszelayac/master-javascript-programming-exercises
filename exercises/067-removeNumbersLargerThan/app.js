@@ -5,6 +5,12 @@ let obj = {
 }
 
 function removeNumbersLargerThan(num, obj) {
-    // your code here
-    
+    // Loop through properties of the object
+    for (const prop in obj) {
+        // Check if the property value is a number and greater than the limit
+        if (obj[prop] > num) {
+        // Delete the property using the delete operator
+        delete obj[prop];
+        }
+    }
 }
