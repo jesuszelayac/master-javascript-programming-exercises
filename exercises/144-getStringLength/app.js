@@ -1,6 +1,10 @@
 function getStringLength(string) {
-    // your code here
-    
+    let length = 0;
+    while (string !== '') {
+        length++;
+        string = string.slice(1);
+    }
+    return length;
 }
 
 let output = getStringLength('hello');

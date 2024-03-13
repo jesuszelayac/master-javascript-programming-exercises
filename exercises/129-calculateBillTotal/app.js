@@ -1,6 +1,12 @@
 function calculateBillTotal(preTaxAndTipAmount) {
-    // your code here
-    
+    const taxRate = 0.095;
+    const tipRate = 0.15;
+
+    const taxAmount = preTaxAndTipAmount * taxRate;
+    const tipAmount = preTaxAndTipAmount * tipRate;
+    const totalAmount = preTaxAndTipAmount + taxAmount + tipAmount;
+
+    return totalAmount;
 }
 
 let output = calculateBillTotal(20);

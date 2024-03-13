@@ -1,7 +1,12 @@
 function listAllValues(obj) {
-  // your code here
-  
+  let valuesArray = [];
+  for (let key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      valuesArray.push(obj[key]);
+    }
+  }
+  return valuesArray;
 }
 
-let output = listAllValues({ name: 'Sam', age: 25, hasPets: true });
-console.log(output); // --> [ 'Sam', 25, true ]
+let output = listAllValues({ name: 'Krysten', age: 33, hasPets: false });
+console.log(output); // --> [ 'Krysten', 33, false ]

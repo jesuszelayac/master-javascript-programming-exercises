@@ -17,9 +17,18 @@ let currentInventory = [
     }
   ];
 
-function renderInventory(shoeList) {
-    // your code here
-    
+  function renderInventory(shoeList) {
+    let blackShoes = [];
+
+    shoeList.forEach(designer => {
+        designer.shoes.forEach(shoe => {
+            if (shoe.name.includes('black')) {
+                blackShoes.push([designer.name, shoe.name, shoe.price]);
+            }
+        });
+    });
+
+    return blackShoes;
 }
 
 console.log(renderInventory(currentInventory));

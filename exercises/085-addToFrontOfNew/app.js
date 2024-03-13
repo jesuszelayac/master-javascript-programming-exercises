@@ -1,6 +1,10 @@
 function addToFrontOfNew(arr, element) {
     // your code here
-    
+    const newArr = arr.slice();
+    // Add the element to the beginning of the new array using unshift
+    newArr.unshift(element);
+    // Return the new array
+    return newArr;
 }
 
 let input = [1, 2];
