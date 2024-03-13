@@ -1,15 +1,20 @@
 function getLargestElement(arr) {
-  // your code here
-  // Initialize largest element with the first element
+  // Check if the array is empty
+  if (arr.length === 0) {
+    return 0;
+  }
+
+  // Initialize the largest number to the first element of the array
   let largest = arr[0];
 
   // Iterate through the array to find the largest element
-  for (const element of arr) {
-    if (element > largest) {
-      largest = element;
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > largest) {
+      largest = arr[i];
     }
   }
 
+  // Return the largest element
   return largest;
 }
 

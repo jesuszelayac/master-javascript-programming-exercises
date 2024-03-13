@@ -1,16 +1,24 @@
 function getSmallestElementAtProperty(obj, key) {
-    // your code here
-    if (key in obj && Array.isArray(obj[key])) {
-      // Check if the array is empty
-      if (!obj[key].length) {
-        return undefined;
-      }
-  
-      // Use Math.min to find the smallest element
-      return Math.min(...obj[key]);
+    // Check if the property exists and if it's an array
+    if (!obj.hasOwnProperty(key) || !Array.isArray(obj[key])) {
+      return [];
     }
-    // Otherwise, return undefined
-    return undefined;
+
+    // Check if the array is empty
+    if (obj[key].length === 0) {
+      return [];
+    }
+
+    // Find the smallest element in the array
+    let smallest = obj[key][0];
+    for (let i = 1; i < obj[key].length; i++) {
+      if (obj[key][i] < smallest) {
+        smallest = obj[key][i];
+      }
+    }
+
+    // Return the smallest element
+    return smallest;
 }
 
 let obj = {
