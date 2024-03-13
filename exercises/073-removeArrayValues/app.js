@@ -1,9 +1,10 @@
 function removeArrayValues(obj) {
     // your code here
-    // Loop through properties of the object
-    for (const prop in obj) {
-        if (typeof obj[prop] === 'array') {
-        delete obj[prop];
+    for (const key in obj) {
+        // Check if the value is an array using Array.isArray
+        if (Array.isArray(obj[key])) {
+          // Delete the property using delete operator
+          delete obj[key];
         }
-    }
+      }
 }

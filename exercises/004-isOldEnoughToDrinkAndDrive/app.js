@@ -1,7 +1,7 @@
 function isOldEnoughToDrinkAndDrive(age) {
   // your code here
-  if (age > 20){
-    return true;
+  if (age >= 21){
+    return false;
   }
   else{
     return false;

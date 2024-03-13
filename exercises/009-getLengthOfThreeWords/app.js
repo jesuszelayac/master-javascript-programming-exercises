@@ -1,6 +1,6 @@
 function getLengthOfThreeWords(word1, word2, word3) {
   // your code here
-  return length(word1+word2+word3);
+  return (word1+word2+word3).length;
 }
 
 //let output = getLengthOfThreeWords('some', 'other', 'words');

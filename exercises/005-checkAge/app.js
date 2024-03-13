@@ -1,9 +1,9 @@
 function checkAge(name, age) {
   // your code here
-  if (age > 20){
-    console.log("Welcome " + name + "!");
+  if (age >= 21){
+    return "Welcome, " + name + "!";
   }
   else {
-    console.log("Go home, " + name + "!");
+    return "Go home, " + name + "!";
   }
 }

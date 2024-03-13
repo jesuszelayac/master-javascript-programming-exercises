@@ -1,9 +1,11 @@
 // Write your function here
-function getFirstElementOfProperty(obj, key) {
-    if (key in obj && Array.isArray(obj[key])) {
-      // Return the first element if the array is not empty
-      return obj[key].length > 0 ? obj[key][0] : undefined;
+function getNthElementOfProperty(obj, key, n) {
+  // Check if the property exists in the object and it's an array
+  if (obj.hasOwnProperty(key) && Array.isArray(obj[key])) {
+    // Check if the array is not empty and if n is within the array bounds
+    if (obj[key].length > 0 && n >= 0 && n < obj[key].length) {
+      return obj[key][n]; // Return the nth element of the array
     }
-    // Otherwise, return undefined
-    return undefined;
   }
+  return undefined; // Return undefined if conditions are not met
+}
